@@ -71,3 +71,12 @@
 	@import 'layout/footer';
 	@import 'layout/navPanel';
     @import 'layout/ghost';
+
+
+	.tag-card-container{
+		img{
+			width: 100%;
+			height: 400px;
+			object-fit: cover;
+		}
+	}
