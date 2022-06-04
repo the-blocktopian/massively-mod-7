@@ -48,26 +48,26 @@ into the {body} of the default.hbs template --}}
         {{/foreach}}
 
     </section>
-   {{#get "tags" limit="all" include='count.posts'}}
-   <section class = "posts">
-    <ul class="tags">
-        {{#foreach tags}}
-            <header>
-                <h2><a class="post-card tag-card-container"  href="{{url}}">{{name}}</a></h2>
-            </header>
-            {{#if feature_image}}
-            <a class="post-card tag-card-container" href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{name}}" /></a>
-            {{/if}}
-            <p>{{description}}</p>
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">See All</a></li>
-            </ul>
-        {{/foreach}}
-    </ul>
-{{/get}}
-
-    </section>
-    </section>
+    {{#get "tags" limit="all" include='count.posts'}}
+        <section class = "posts">
+            {{#foreach tags}}
+            <article class="tags">
+                <header>
+                    <h2><a class="post-card tag-card-container"  href="{{url}}">{{name}}</a></h2>
+                </header>
+                {{#if feature_image}}
+                <a class="post-card tag-card-container image fit" href="{{url}}">
+                    <img src="{{img_url feature_image}}" alt="{{name}}" />
+                </a>
+                {{/if}}
+                <p>{{description}}</p>
+                <ul class="actions special">
+                    <li><a href="{{url}}" class="button">See All</a></li>
+                </ul>
+            </article>
+            {{/foreach}}
+        </section>
+    {{/get}}
 
     {{!-- Pagination --}}
     {{pagination}}
