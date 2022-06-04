@@ -14,9 +14,6 @@ into the {body} of the default.hbs template --}}
         {{else}}
             <p>A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}</p>
         {{/if}}
-        {{#if feature_image}}
-        <a href="{{url}}" class="image main"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-        {{/if}}
     </header>
     {{/tag}}
 
