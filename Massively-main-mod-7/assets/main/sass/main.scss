@@ -76,7 +76,32 @@
 	.tag-card-container{
 		img{
 			width: 100%;
-			height: 400px;
 			object-fit: cover;
+		}
+	}
+
+	#main>.posts>article.tags {
+		width: 33.3333%;
+		border-left-width: 2px;
+		&:nth-child(3) {
+			border-top-width: 0;
+		}
+	}
+	#main>.posts>article.tags:nth-child(3n+1) {
+		border-left-width: 0;
+	}
+	#main>.posts>article.tags:nth-child(3) {
+		border-top-width: 0;
+	}
+	@media screen and (max-width: 736px) {
+		#main>.posts>article.tags {
+			width: 100%;
+			border-left-width: 0;
+			&:nth-child(3) {
+				border-top-width: 0;
+			}
+			&:nth-child(3n+1) {
+				border-left-width: 0;
+			}
 		}
 	}
