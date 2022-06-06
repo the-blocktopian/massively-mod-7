@@ -83,6 +83,7 @@
 	#main>.posts>article.tags {
 		width: 33.3333%;
 		border-left-width: 2px;
+		padding: 2rem;
 		&:nth-child(3) {
 			border-top-width: 0;
 		}
