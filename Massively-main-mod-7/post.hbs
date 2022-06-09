@@ -11,15 +11,8 @@ into the {body} of the default.hbs template --}}
     <section class="post">
 
         <header class="major">
+                   <h1>{{title}}</h1>
             <span class="date">{{date format="MMMM D, YYYY"}}</span>
-                        <h1>{{title}}</h1>
-            {{#if custom_excerpt}}
-                <p class="content">{{custom_excerpt}}</p><br/>
-            {{/if}}
-            {{reading_time}} 
-                
-            
-        </header>
 
         
 
@@ -31,6 +24,15 @@ into the {body} of the default.hbs template --}}
             {{/if}}
         </figure>
         {{/if}}
+        
+            {{#if custom_excerpt}}
+                <p class="content">{{custom_excerpt}}</p><br/>
+            {{/if}}
+            {{reading_time}} 
+                
+            
+        </header>
+
 
         <div class="content">
             {{content}}
